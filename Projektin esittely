@@ -1,0 +1,3 @@
+Arduino unolle tehty reaktiopeli. ledien syttyessä pitää painaa lediä vastaavaa nappia ja se nostaa scorea yhdellä joka näytetään kahdella 7-segmenttinäytöllä.
+Joka tasakymmen ledien syttymis vauhti nopeutuu.
+Peli tallentaa 4 korkeinta tulosta eeprom muistiin ja ne näytetään näytöillä pelin nappeja painamalla silloin kun peli ei ole käynnissä.
