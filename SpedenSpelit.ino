@@ -15,17 +15,21 @@
   int buttonPress[99];
 void setup()
 {
-  Serial.begin(9600); // alustetaan ledit,napit ja näytöt koska niitä tarvitaan highscorejen näyttämiseen
+  Serial.begin(9600); 
+  // alustetaan ledit,napit ja näytöt koska niitä tarvitaan highscorejen näyttämiseen
   initButtonsAndButtonInterrupts();
   initializeLeds();
   initializeDisplay();
+
+  
 }
 
 void loop()
 {
 }
 ISR(PCINT2_vect) {
-    int hiScore; //jos peli ei ole päällä näytetään joka napilla eri highscore. isoin score vasemmasta napista ja pienin oikeasta
+    int hiScore; 
+    //jos peli ei ole päällä näytetään joka napilla eri highscore. isoin score vasemmasta napista ja pienin oikeasta
     if(digitalRead(2) == LOW && !gameOn){
       hiScore = eeprom_read_byte(0);
       showResult(hiScore);
